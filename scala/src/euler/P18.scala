@@ -15,6 +15,12 @@ object P18 {
 
     printTriangle(s)
 
-    
+    for (i <- 1 to s.size-1) {
+      for (j <- 0 to s(i).size-1) {
+        s(i)(j) = s(i)(j) + math.max(s(i-1)(j), s(i-1)(j+1))
+      }
+    }
+
+    printTriangle(s)
    }
 }
